@@ -1,0 +1,39 @@
+
+/*设置外部颜色为灰色,主table颜色是白色,以区分*/
+body
+{
+    background-color: gray;
+}
+table
+{
+    background-color: white;
+}
+
+/*主标题和基本信息描述,继续用一个table来实现左边图片,右面是若干行文字描述*/
+table.head tr
+{
+    display: inline;
+}
+table.head td
+{
+    display: table-cell;
+}
+table.head td>p
+{
+    text-align: center;
+}
+
+
+/*设置每条博客的边界和间隙*/
+.blogs>div
+{   
+    margin:10%;
+    border-style:solid;
+}
+
+/*改变部分超链接的颜色*/
+.description a
+{
+    color: blue;
+}
+
