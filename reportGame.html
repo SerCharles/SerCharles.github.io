@@ -1,0 +1,228 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>report</title><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px !important; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="mermaid"] svg, [lang="flow"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+
+
+:root { --side-bar-bg-color: #fafafa; --control-text-color: #777; }
+html { font-size: 16px; }
+body { font-family: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; color: rgb(51, 51, 51); line-height: 1.6; }
+#write { max-width: 860px; margin: 0px auto; padding: 30px 30px 100px; }
+#write > ul:first-child, #write > ol:first-child { margin-top: 30px; }
+a { color: rgb(65, 131, 196); }
+h1, h2, h3, h4, h5, h6 { position: relative; margin-top: 1rem; margin-bottom: 1rem; font-weight: bold; line-height: 1.4; cursor: text; }
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor { text-decoration: none; }
+h1 tt, h1 code { font-size: inherit; }
+h2 tt, h2 code { font-size: inherit; }
+h3 tt, h3 code { font-size: inherit; }
+h4 tt, h4 code { font-size: inherit; }
+h5 tt, h5 code { font-size: inherit; }
+h6 tt, h6 code { font-size: inherit; }
+h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom: 1px solid rgb(238, 238, 238); }
+h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom: 1px solid rgb(238, 238, 238); }
+h3 { font-size: 1.5em; line-height: 1.43; }
+h4 { font-size: 1.25em; }
+h5 { font-size: 1em; }
+h6 { font-size: 1em; color: rgb(119, 119, 119); }
+p, blockquote, ul, ol, dl, table { margin: 0.8em 0px; }
+li > ol, li > ul { margin: 0px; }
+hr { height: 2px; padding: 0px; margin: 16px 0px; background-color: rgb(231, 231, 231); border: 0px none; overflow: hidden; box-sizing: content-box; }
+li p.first { display: inline-block; }
+ul, ol { padding-left: 30px; }
+ul:first-child, ol:first-child { margin-top: 0px; }
+ul:last-child, ol:last-child { margin-bottom: 0px; }
+blockquote { border-left: 4px solid rgb(223, 226, 229); padding: 0px 15px; color: rgb(119, 119, 119); }
+blockquote blockquote { padding-right: 0px; }
+table { padding: 0px; word-break: initial; }
+table tr { border-top: 1px solid rgb(223, 226, 229); margin: 0px; padding: 0px; }
+table tr:nth-child(2n), thead { background-color: rgb(248, 248, 248); }
+table tr th { font-weight: bold; border-width: 1px 1px 0px; border-top-style: solid; border-right-style: solid; border-left-style: solid; border-top-color: rgb(223, 226, 229); border-right-color: rgb(223, 226, 229); border-left-color: rgb(223, 226, 229); border-image: initial; border-bottom-style: initial; border-bottom-color: initial; text-align: left; margin: 0px; padding: 6px 13px; }
+table tr td { border: 1px solid rgb(223, 226, 229); text-align: left; margin: 0px; padding: 6px 13px; }
+table tr th:first-child, table tr td:first-child { margin-top: 0px; }
+table tr th:last-child, table tr td:last-child { margin-bottom: 0px; }
+.CodeMirror-lines { padding-left: 4px; }
+.code-tooltip { box-shadow: rgba(0, 28, 36, 0.3) 0px 1px 1px 0px; border-top: 1px solid rgb(238, 242, 242); }
+.md-fences, code, tt { border: 1px solid rgb(231, 234, 237); background-color: rgb(248, 248, 248); border-radius: 3px; padding: 2px 4px 0px; font-size: 0.9em; }
+code { background-color: rgb(243, 244, 244); padding: 0px 2px; }
+.md-fences { margin-bottom: 15px; margin-top: 15px; padding-top: 8px; padding-bottom: 6px; }
+.md-task-list-item > input { margin-left: -1.3em; }
+@media print {
+  html { font-size: 13px; }
+  table, pre { break-inside: avoid; }
+  pre { overflow-wrap: break-word; }
+}
+.md-fences { background-color: rgb(248, 248, 248); }
+#write pre.md-meta-block { padding: 1rem; font-size: 85%; line-height: 1.45; background-color: rgb(247, 247, 247); border: 0px; border-radius: 3px; color: rgb(119, 119, 119); margin-top: 0px !important; }
+.mathjax-block > .code-tooltip { bottom: 0.375rem; }
+.md-mathjax-midline { background: rgb(250, 250, 250); }
+#write > h3.md-focus::before { left: -1.5625rem; top: 0.375rem; }
+#write > h4.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+#write > h5.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+#write > h6.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+.md-image > .md-meta { border-radius: 3px; padding: 2px 0px 0px 4px; font-size: 0.9em; color: inherit; }
+.md-tag { color: rgb(167, 167, 167); opacity: 1; }
+.md-toc { margin-top: 20px; padding-bottom: 20px; }
+.sidebar-tabs { border-bottom: none; }
+#typora-quick-open { border: 1px solid rgb(221, 221, 221); background-color: rgb(248, 248, 248); }
+#typora-quick-open-item { background-color: rgb(250, 250, 250); border-color: rgb(254, 254, 254) rgb(229, 229, 229) rgb(229, 229, 229) rgb(238, 238, 238); border-style: solid; border-width: 1px; }
+.on-focus-mode blockquote { border-left-color: rgba(85, 85, 85, 0.12); }
+header, .context-menu, .megamenu-content, footer { font-family: "Segoe UI", Arial, sans-serif; }
+.file-node-content:hover .file-node-icon, .file-node-content:hover .file-node-open-state { visibility: visible; }
+.mac-seamless-mode #typora-sidebar { background-color: var(--side-bar-bg-color); }
+.md-lang { color: rgb(180, 101, 77); }
+.html-for-mac .context-menu { --item-hover-bg-color: #E6F0FE; }
+#md-notification .btn { border: 0px; }
+.dropdown-menu .divider { border-color: rgb(229, 229, 229); }
+
+
+</style>
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = 'is-node'><h1><a name="%E6%B8%B8%E6%88%8F%E6%8A%A5%E5%91%8A" class="md-header-anchor"></a><span>游戏报告</span></h1><p><span>软73 沈冠霖 2017013569 </span><a href='mailto:shenguanlin1999@163.com' target='_blank' class='url'>shenguanlin1999@163.com</a></p><h2><a name="0.%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84" class="md-header-anchor"></a><span>0.项目结构</span></h2><p><span>src中，HoldTheFort文件夹是游戏前端的工程文件夹，backEnd文件夹是后端的源代码（后端的实际代码运行在服务器上）。</span></p><p><span>ext文件夹存储了一些辅助图片（比如类继承关系），其design文件夹存着所有界面的设计图。</span></p><h2><a name="1.%E6%B8%B8%E6%88%8F%E4%BB%8B%E7%BB%8D" class="md-header-anchor"></a><span>1.游戏介绍</span></h2><h3><a name="1.1-%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF" class="md-header-anchor"></a><span>1.1 基本信息</span></h3><p><span>游戏名称：Hold The Fort(守卫堡垒)</span></p><p><span>操作系统：Windows 10</span></p><p><span>开发环境：Cocos Creator 2.0.10 + VSCode</span></p><p><span>上传工具：微信开发者工具</span></p><p><span>测试手机：一加5</span></p><h3><a name="1.2-%E6%B8%B8%E6%88%8F%E6%A6%82%E5%86%B5" class="md-header-anchor"></a><span>1.2 游戏概况</span></h3><p><span>这是一款2D塔防游戏，游戏设定在17,18世纪之交的大土耳其战争中，一座被奥斯曼军队层层包围的城堡。你扮演城堡守将或援军将领，目标是尽可能多杀伤敌人，守卫城堡。</span></p><p><span>游戏一共有两个模式：Standard Game（标准模式）和Artillery Game（炮兵模式）。在这两个模式中，多种敌人会被源源不断地刷出，你的目标都是守卫城堡，不让敌人占领广场，同时尽可能多的击杀敌人以获得分数。在标准模式下，你的任务是</span><strong><span>拖动单位到城墙上</span></strong><span>来抵抗敌人。在炮兵模式下，你控制四门</span><strong><span>大炮</span></strong><span>攻击敌人。</span></p><h2><a name="2.%E6%B8%B8%E6%88%8F%E7%AD%96%E5%88%92%E4%B8%8E%E5%8A%9F%E8%83%BD" class="md-header-anchor"></a><span>2.游戏策划与功能</span></h2><h3><a name="2.1-%E6%B8%B8%E6%88%8F%E7%8E%A9%E6%B3%95" class="md-header-anchor"></a><span>2.1 游戏玩法</span></h3><h4><a name="2.1.1-%E6%95%B4%E4%BD%93%E7%8E%A9%E6%B3%95" class="md-header-anchor"></a><span>2.1.1 整体玩法</span></h4><p><span>游戏地图中央是你要守卫的城堡，</span><strong><span>城墙</span></strong><span>上是我军士兵，周围会源源不断地</span><strong><span>随机刷出敌军士兵</span></strong><span>。杀死敌人士兵，你会获得</span><strong><span>分数和金钱</span></strong><span>。一旦敌人占领</span><strong><span>城堡中心的广场</span></strong><span>一段时间，游戏就会结束。</span></p><h4><a name="2.1.2-%E6%A0%87%E5%87%86%E6%A8%A1%E5%BC%8F" class="md-header-anchor"></a><span>2.1.2 标准模式</span></h4><p><span>标准模式下，你要做的是利用好手头的金钱，从右侧的三个按钮处</span><strong><span>拖放</span></strong><span>你要的兵种到</span><strong><span>城墙上</span></strong><span>。利用好</span><strong><span>不同兵种的特性</span></strong><span>来有效防御城堡，击杀敌人。整个流程类似植物大战僵尸。</span></p><h4><a name="2.1.3-%E7%82%AE%E5%85%B5%E6%A8%A1%E5%BC%8F" class="md-header-anchor"></a><span>2.1.3 炮兵模式</span></h4><p><span>这个模式下，城堡的守军会自动刷新。你操作四门大炮，大炮会自动调度，你只需要在合适的时机，向合适的位置开炮就好。为了有效防御城堡，杀伤敌人，你需要综合考虑大炮的</span><strong><span>装填时间</span></strong><span>，攻击的</span><strong><span>提前量</span></strong><span>，还有与友军</span><strong><span>进行配合</span></strong><span>。</span></p><p><span>2.2 游戏界面</span></p><p><span> 游戏共有如下页面</span></p><ul><li><h4><a name="%E4%B8%80%E4%B8%AA%E5%90%AF%E5%8A%A8%E7%95%8C%E9%9D%A2" class="md-header-anchor"></a><span>一个启动界面</span></h4></li><li><p><span>一个加载读条界面</span></p></li><li><p><span>两种模式各有一个游戏界面</span></p></li><li><p><span>一个结算界面</span></p></li><li><p><span>一系列游戏信息界面</span></p></li></ul><p><span>具体的页面信息见3.</span></p><h3><a name="2.3-%E6%B8%B8%E6%88%8F%E5%85%83%E7%B4%A0" class="md-header-anchor"></a><span>2.3 游戏元素</span></h3><h4><a name="2.3.1-%E5%85%B5%E7%A7%8D" class="md-header-anchor"></a><span>2.3.1 兵种</span></h4><p><span>游戏定义了以下兵种</span></p><ul><li><p><span>近战步兵：近距离作战，生存能力强</span></p></li><li><p><span>火枪兵：远程作战，发射子弹攻击，生存能力一般</span></p></li><li><p><span>炮兵：超远距离作战，发射炮弹，范围无差别攻击，但是生存能力差，装填速度慢</span></p></li><li><p><span>自爆兵：只有敌人有，快速冲向最近的我方士兵，被杀死或者到达目标都会自爆，范围无差别攻击</span></p></li><li><p><span>攻城塔：只有敌人有，移动速度慢，但是生存能力很强，只能向城墙移动。但是攻城塔出现的时候，其后面会同时出现一大批敌人。</span></p><p>&nbsp;</p></li></ul><h4><a name="2.3.2-%E5%85%B6%E4%BB%96%E7%89%A9%E4%BD%93" class="md-header-anchor"></a><span>2.3.2 其他物体</span></h4><p><span>游戏还定义了以下物体</span></p><ul><li><span>子弹：火枪兵发射，射向一个指定的方向，攻击单一目标。如果没有命中，子弹会出界并且消失。</span></li><li><span>炮弹：炮兵发射，射向一个指定的位置，到达位置后爆炸，无差别群体攻击。爆炸伤害随着距离线性衰减。</span></li><li><span>金币：标准模式下，杀死敌人会原地掉落金币，触摸即可拾取金币。如果一段时间没有拾取，金币会褪色乃至消失</span></li></ul><h4><a name="2.3.3-%E5%85%B5%E7%A7%8D%E7%9A%84ai" class="md-header-anchor"></a><span>2.3.3 兵种的AI</span></h4><p><span>近战步兵，火枪兵和炮兵的AI类似。</span></p><p><span>如果攻击范围内没有敌人，那么我军会站在城墙上不动，敌人会向城堡中心方向移动。如果攻击范围内出现敌人，这三种兵种都会发动攻击，然后站在原地进行装填或冷却。</span></p><p><span>自爆兵的AI则是寻找离自己最近的我军士兵，然后自爆。如果没有我军士兵，自爆兵则会向城堡中心方向移动。</span></p><p><span>攻城塔则是向最近的城墙移动。</span></p><h4><a name="2.3.4-%E5%85%B5%E7%A7%8D%E7%9A%84%E5%85%B6%E4%BB%96%E5%B1%9E%E6%80%A7" class="md-header-anchor"></a><span>2.3.4 兵种的其他属性</span></h4><p><span>每个兵种都有对应的生命值和生命恢复。每秒士兵会自动恢复生命。其生命值显示在其下面的</span><strong><span>红色血条</span></strong><span>上。</span></p><p><span>每个兵种都有攻击力和防御力，兵种造成伤害的计算函数如下:</span></p><div contenteditable="false" spellcheck="false" class="mathjax-block md-end-block md-math-block md-rawblock" id="mathjax-n70" cid="n70" mdtype="math_block"><div class="md-rawblock-container md-math-container" tabindex="-1"><div class="MathJax_SVG_Display" style="text-align: center;"><span class="MathJax_SVG" id="MathJax-Element-1-Frame" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="39.175ex" height="2.227ex" viewBox="0 -755.9 16866.8 958.9" role="img" focusable="false" style="vertical-align: -0.472ex; max-width: 100%;"><defs><path stroke-width="0" id="E1-MJMAIN-3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path><path stroke-width="0" id="E1-MJMAIN-2217" d="M229 286Q216 420 216 436Q216 454 240 464Q241 464 245 464T251 465Q263 464 273 456T283 436Q283 419 277 356T270 286L328 328Q384 369 389 372T399 375Q412 375 423 365T435 338Q435 325 425 315Q420 312 357 282T289 250L355 219L425 184Q434 175 434 161Q434 146 425 136T401 125Q393 125 383 131T328 171L270 213Q283 79 283 63Q283 53 276 44T250 35Q231 35 224 44T216 63Q216 80 222 143T229 213L171 171Q115 130 110 127Q106 124 100 124Q87 124 76 134T64 161Q64 166 64 169T67 175T72 181T81 188T94 195T113 204T138 215T170 230T210 250L74 315Q65 324 65 338Q65 353 74 363T98 374Q106 374 116 368T171 328L229 286Z"></path><path stroke-width="0" id="E1-MJMAIN-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path stroke-width="0" id="E1-MJMAIN-2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><text font-family="STIXGeneral,'Arial Unicode MS',serif" stroke="none" transform="scale(50.259) matrix(1 0 0 -1 0 0)">伤</text><g transform="translate(804,0)"><text font-family="STIXGeneral,'Arial Unicode MS',serif" stroke="none" transform="scale(50.259) matrix(1 0 0 -1 0 0)">害</text></g><use xlink:href="#E1-MJMAIN-3D" x="1886" y="0"></use><g transform="translate(2941,0)"><text font-family="STIXGeneral,'Arial Unicode MS',serif" stroke="none" transform="scale(50.259) matrix(1 0 0 -1 0 0)">攻</text></g><g transform="translate(3745,0)"><text font-family="STIXGeneral,'Arial Unicode MS',serif" stroke="none" transform="scale(50.259) matrix(1 0 0 -1 0 0)">击</text></g><g transform="translate(4550,0)"><text font-family="STIXGeneral,'Arial Unicode MS',serif" stroke="none" transform="scale(50.259) matrix(1 0 0 -1 0 0)">力</text></g><use xlink:href="#E1-MJMAIN-2217" x="5576" y="0"></use><g transform="translate(6298,0)"><text font-family="STIXGeneral,'Arial Unicode MS',serif" stroke="none" transform="scale(50.259) matrix(1 0 0 -1 0 0)">（</text></g><use xlink:href="#E1-MJMAIN-31" x="7102" y="0"></use><use xlink:href="#E1-MJMAIN-2212" x="7825" y="0"></use><g transform="translate(8825,0)"><text font-family="STIXGeneral,'Arial Unicode MS',serif" stroke="none" transform="scale(50.259) matrix(1 0 0 -1 0 0)">防</text></g><g transform="translate(9629,0)"><text font-family="STIXGeneral,'Arial Unicode MS',serif" stroke="none" transform="scale(50.259) matrix(1 0 0 -1 0 0)">御</text></g><g transform="translate(10433,0)"><text font-family="STIXGeneral,'Arial Unicode MS',serif" stroke="none" transform="scale(50.259) matrix(1 0 0 -1 0 0)">力</text></g><g transform="translate(11237,0)"><text font-family="STIXGeneral,'Arial Unicode MS',serif" stroke="none" transform="scale(50.259) matrix(1 0 0 -1 0 0)">对</text></g><g transform="translate(12041,0)"><text font-family="STIXGeneral,'Arial Unicode MS',serif" stroke="none" transform="scale(50.259) matrix(1 0 0 -1 0 0)">应</text></g><g transform="translate(12846,0)"><text font-family="STIXGeneral,'Arial Unicode MS',serif" stroke="none" transform="scale(50.259) matrix(1 0 0 -1 0 0)">的</text></g><g transform="translate(13650,0)"><text font-family="STIXGeneral,'Arial Unicode MS',serif" stroke="none" transform="scale(50.259) matrix(1 0 0 -1 0 0)">百</text></g><g transform="translate(14454,0)"><text font-family="STIXGeneral,'Arial Unicode MS',serif" stroke="none" transform="scale(50.259) matrix(1 0 0 -1 0 0)">分</text></g><g transform="translate(15258,0)"><text font-family="STIXGeneral,'Arial Unicode MS',serif" stroke="none" transform="scale(50.259) matrix(1 0 0 -1 0 0)">比</text></g><g transform="translate(16062,0)"><text font-family="STIXGeneral,'Arial Unicode MS',serif" stroke="none" transform="scale(50.259) matrix(1 0 0 -1 0 0)">）</text></g></g></svg></span></div><script type="math/tex; mode=display" id="MathJax-Element-1">伤害 = 攻击力 * （1 - 防御力对应的百分比）</script></div></div><p><span>每个兵种都有装填时间，在攻击结束后，单位会进入装填状态，待在原地不动。其装填时间显示在下面的</span><strong><span>紫色条</span></strong><span>上。</span></p><p><span>我方兵种都有等级和经验。我军每攻击一次都会增加经验，其等级显示在</span><strong><span>兵种下方</span></strong><span>，经验显示在下面的</span><strong><span>金色条</span></strong><span>上。</span></p><h3><a name="2.4-%E6%B8%B8%E6%88%8F%E4%BA%8B%E4%BB%B6" class="md-header-anchor"></a><span>2.4 游戏事件</span></h3><h4><a name="2.4.1-%E9%9A%8F%E6%9C%BA%E4%BA%8B%E4%BB%B6%EF%BC%9A%E9%9A%8F%E6%9C%BA%E7%94%9F%E6%88%90%E6%95%8C%E4%BA%BA%E5%92%8C%E6%88%91%E5%86%9B" class="md-header-anchor"></a><span>2.4.1 随机事件：随机生成敌人和我军</span></h4><p><span>两个模式的敌人都是随机生成的，分为</span><strong><span>三个频率的事件</span></strong><span>。频率最快的是刷出</span><strong><span>敌人小兵</span></strong><span>1个（近战兵，火枪兵），频率中等的是刷出敌人</span><strong><span>高级兵</span></strong><span>（自爆兵，炮兵），频率最慢的是刷出敌人</span><strong><span>大部队</span></strong><span>（攻城塔附带一系列近战兵和火枪兵）。</span></p><p><span>炮兵模式的我军也是随机生成在城堡上的，只不过近战兵和火枪兵概率较大，炮兵概率较小。</span></p><h4><a name="2.4.2-%E5%B1%8F%E5%B9%95%E7%82%B9%E5%87%BB%E4%B8%8E%E6%8B%96%E5%8A%A8%E4%BA%8B%E4%BB%B6" class="md-header-anchor"></a><span>2.4.2 屏幕点击与拖动事件</span></h4><p><span>在标准模式下，如果你的金钱够用，你可以点击右侧兵种的对应按钮，用手指把兵种</span><strong><span>拖动到对应位置</span></strong><span>，然后</span><strong><span>松手放置单位</span></strong><span>。拖动的时候，如果此处能放置，你手指的位置会</span><strong><span>变黄</span></strong><span>，否则</span><strong><span>变红</span></strong><span>。</span></p><p><span>在炮兵模式下，你可以用手指在屏幕上</span><strong><span>拖动选择攻击位置</span></strong><span>，然后</span><strong><span>松手攻击</span></strong><span>。如果当前能攻击，你手指的位置会</span><strong><span>变黄</span></strong><span>，否则</span><strong><span>变红</span></strong><span>。炮弹就落在你手指松开的位置。</span></p><h3><a name="2.5-%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%83%8C%E6%99%AF%EF%BC%8C%E5%88%9B%E6%84%8F%E5%8F%8A%E5%8F%82%E8%80%83" class="md-header-anchor"></a><span>2.5 游戏设计的背景，创意及参考</span></h3><p><span>我一开始想做类似《文明》的回合制对战，但是因为回合制对战无论写AI还是联机对战，难度都太大，因此放弃。之后我就考虑做类似《植物大战僵尸》的塔防游戏，我选择把《文明》的兵种设定，《全面战争》的攻城模式和《植物大战僵尸》的游戏玩法结合，做成了标准模式。</span></p><p><span>在游戏制作中，我意识到，自己做的炮兵AI选择的攻击目标往往不是最优解，而《植物大战僵尸》的玉米加农炮则是手工操作的。因此，我在原有游戏框架上设计了炮兵模式，让玩家自己控制炮兵攻击的位置。个人感觉，炮兵模式更有意思。</span></p><p><span>个人认为，游戏设计的创新点有两点。首先，相比《植物大战僵尸》，游戏地图是真2D的，无论攻击目标选择还是移动都是在平面内进行的，丰富了玩家的选择，提高了游戏难度。其次，炮兵模式个人觉得是一个比较有趣味，也比较有新意的模式。</span></p><h2><a name="3.%E6%B8%B8%E6%88%8F%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1" class="md-header-anchor"></a><span>3.游戏界面设计</span></h2><p><span>游戏主界面和游戏信息界面都是简练的图文描述+按钮。</span></p><p><span>游戏结算界面我实现了显示本局游戏分数，以及本模式的总共历史最高分（因为体验版小游戏不能自动读取用户信息了）。总共历史最高分是用一个简单的后端实现的，将在4里介绍。</span></p><p><span>两个模式的游戏界面大致相同，都是用tiledmap构成游戏的主地图，再在边角添加按钮，分数和金钱显示等。我用tiled工具生成了一个有两层（groundLayer，Showlayer）的主地图，其中地图中央是围着一圈的城堡，可以放友军，敌人上城堡会有一定的debuff，地图其余地方是绿色草地。同时，我还在两个游戏中添加了暂停/继续按钮，声音开关和快速结束按钮，来优化游戏体验。</span></p><p><span>游戏流程如下：在主界面点击GameInfo按钮会进入游戏信息界面，可以点击对应的按钮查看对应的游戏信息，也可以返回主界面。主界面可以点击Standard Game和Artillery Game 按钮分别进入两个模式。为了防止加载主游戏场景的卡顿，我在进入游戏场景前添加了一个加载场景，在这里预先加载游戏场景资源，读条完毕后自动进入游戏。在游戏中，可以点击Finish按钮结束游戏，或者被敌人占领广场自动结束游戏，之后就会跳转到结算界面。结算界面可以回到主界面。</span></p><h2><a name="4.%E6%B8%B8%E6%88%8F%E9%87%8D%E7%82%B9%E6%A8%A1%E5%9D%97%E7%9A%84%E5%AE%9E%E7%8E%B0" class="md-header-anchor"></a><span>4.游戏重点模块的实现</span></h2><h3><a name="4.1-%E6%B8%B8%E6%88%8F%E4%B8%BB%E4%BD%93%E6%A1%86%E6%9E%B6" class="md-header-anchor"></a><span>4.1 游戏主体框架</span></h3><p><span>游戏主体框架，就是以士兵和其他物体的生成和更新。这里我参考了之前用C++做QT游戏的各种思路。</span></p><h4><a name="4.1.1-%E5%90%84%E7%A7%8D%E5%A3%AB%E5%85%B5%E7%9A%84%E5%AE%9A%E4%B9%89" class="md-header-anchor"></a><span>4.1.1 各种士兵的定义</span></h4><p><span>士兵我选择用树形的继承关系来定义，每个叶子节点对应一个实际兵种，具体的继承关系如下：</span></p><p><img src='resources/unitTree.png' alt='' referrerPolicy='no-referrer' /></p><p><span>和之前写QT不同的是，由于这里的兵种有很多共用的方法，比如血条，经验条的更新等，因此我这样定义属性和方法：我在</span><strong><span>基类unit里把所有通用的属性和方法都定义好</span></strong><span>，到了具体的子类里，我再定义专用的属性和方法，以及把不用的基类方法</span><strong><span>覆盖成空函数</span></strong><span>。这样可以最大限度复用基类函数，不用重复定义。</span></p><h4><a name="4.1.2-%E5%A3%AB%E5%85%B5%E7%8A%B6%E6%80%81%E7%9A%84%E6%9B%B4%E6%96%B0" class="md-header-anchor"></a><span>4.1.2 士兵状态的更新</span></h4><p><span>我把士兵状态分为两类：第一类是自己可以处理的，包括生命的恢复，装填/冷却，经验值和等级的变化，血条，装填条和经验条的变化，还有位置的移动。第二类是需要其他全局信息才能处理的，包括生成，攻击，被攻击，地形debuff。第一类状态的更新在士兵类内部的update函数下实现，第二类状态的更新在游戏主类mainGame的update函数下实现。</span></p><h4><a name="4.1.3-%E4%BB%BF%E4%BF%A1%E5%8F%B7-%E6%A7%BD%E7%9A%84%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95" class="md-header-anchor"></a><span>4.1.3 仿信号-槽的事件处理方法</span></h4><p><span>我在获取分数，获取金币的地方用到了dispatchevent方法。这样，如果一个敌人被杀死了，它被杀死的信号就可以传播到其父亲节点含有的主游戏类中被接收，这就和QT的信号-槽方法一样，</span><strong><span>降低了耦合度</span></strong><span>。</span></p><h3><a name="4.2-%E8%A7%A6%E5%B1%8F%E4%BA%8B%E4%BB%B6" class="md-header-anchor"></a><span>4.2 触屏事件</span></h3><p><span>作为这个游戏的最主要交互方式，我觉得触屏事件的实现是我这个游戏最大的功能亮点。</span></p><p><span>在标准模式下，我实现了如下的功能：可以用手指把边上按钮代表的兵种拖动到特定位置，并且在我拖动的时候，我手指所在的格子会变色---有效位置是黄色，无效位置是红色。手指抬起，就会在有效位置放置兵种。</span></p><p><span>我的实现方法如下：</span></p><p><span>首先，用一个变量chosenType来表明我当前选中的兵种类型。没有选中就是-1，否则是0,1,2中的一个。在我的手指移动的时候，也就是TOUCH_MOVE事件产生时，我使用event.currentTouch._point来读取触摸的世界坐标，并且把这个坐标转化成关于canvas的坐标。</span></p><p><span>然后，我计算出这个坐标对应的正方形地图格，并且在这个格子上放一个物体：如果是有效的，就放黄色物体，否则放红色物体。同时，我清理所有的其他红/黄色物体。</span></p><p><span>最后，松手的时候，也就是TOUCH_END(在不远处松手)和TOUCH_CANCEL(拖动了较长时间或较远距离后松手)时，我清除所有的红/黄色物体，并且根据chosenType来确定放置哪个兵种，并且把chosenType置为-1.</span></p><p><span>在炮兵模式中，我重写了这个触屏事件，让其能在拖动时显示当前是否能炮击，以及松手进行炮击。</span></p><h3><a name="4.3-%E5%85%A8%E5%B1%80%E5%B8%B8%E9%87%8F%E5%92%8C%E9%9D%99%E6%80%81%E5%8F%98%E9%87%8F%E7%9A%84%E5%BA%94%E7%94%A8" class="md-header-anchor"></a><span>4.3 全局常量和静态变量的应用</span></h3><h4><a name="4.3.1-%E5%85%A8%E5%B1%80%E5%B8%B8%E9%87%8F%E7%9A%84%E5%BA%94%E7%94%A8%EF%BC%9A%E6%8F%90%E9%AB%98%E4%BB%A3%E7%A0%81%E5%8F%AF%E8%AF%BB%E6%80%A7" class="md-header-anchor"></a><span>4.3.1 全局常量的应用：提高代码可读性</span></h4><p><span>在代码中，比如兵种，游戏模式等都有编号。为了提高可读性，我在constants文件下把他们定义成了全局常量，这样关于这些编号的代码可读性就能提高。</span></p><h4><a name="4.3.2-%E9%9D%99%E6%80%81%E5%8F%98%E9%87%8F%E7%9A%84%E5%BA%94%E7%94%A8%EF%BC%9A%E5%9C%BA%E6%99%AF%E5%88%87%E6%8D%A2" class="md-header-anchor"></a><span>4.3.2 静态变量的应用：场景切换</span></h4><p><span>我在constants文件下定义了一个全局静态变量模块：globalModule。在场景切换时，我可能需要传递当前要加载的场景（主界面到加载界面）或者分数（游戏界面到结算界面），我就把这些静态变量赋值成我需要的值，在新的场景读取即可。</span></p><h4><a name="4.3.3-%E9%9D%99%E6%80%81%E5%8F%98%E9%87%8F%E7%9A%84%E5%BA%94%E7%94%A8%EF%BC%9A%E6%9A%82%E5%81%9C/%E7%BB%A7%E7%BB%AD%E6%8C%89%E9%92%AE%E4%B8%8E%E5%A3%B0%E9%9F%B3%E5%BC%80%E5%85%B3" class="md-header-anchor"></a><span>4.3.3 静态变量的应用：暂停/继续按钮与声音开关</span></h4><p><span>同样，因为全局静态变量的特性，我用它实现了游戏的暂停/继续(whetherPlayGame)，以及声音开关(whetherHasSound)。</span></p><p><span>首先，在暂停/继续按钮和声音开关按钮处，我实现了点击按钮就切换按钮图片，并且将对应的变量取反。</span></p><p><span>其次，想暂停游戏，只需要屏蔽所有的update函数和触屏响应函数即可。我就在对应的函数开头作了判定：如果暂停了，直接退出。声音关闭也只需要不播放音乐音效，并且暂停场景音效即可。</span></p><h3><a name="4.4-%E7%AE%80%E5%8D%95%E7%9A%84%E5%90%8E%E7%AB%AF%E5%AE%9E%E7%8E%B0%E5%85%A8%E5%B1%80%E8%AE%B0%E5%BD%95" class="md-header-anchor"></a><span>4.4 简单的后端实现全局记录</span></h3><p><span>本来计划写每个用户的个人记录的，但是因为微信取消对非正式版主域中wx.getUserInfo的支持，只能实现所有玩家的历史最高记录了。</span></p><p><span>前端我使用XMLHttpRequest函数，发送当前的模式和分数到服务器上。在服务器上，我使用express框架，用类似第四次小作业的方式处理请求，解析出模式和分数。然后，我把分数保存在服务器上名字和模式相同的文件里，并且从这个文件读出最大值，返回。</span></p><h2><a name="5.%E6%B8%B8%E6%88%8F%E6%95%88%E6%9E%9C" class="md-header-anchor"></a><span>5.游戏效果</span></h2><p><span>个人觉得，自己在游戏效果和优化上做的比较好的有几点：</span></p><ul><li><span>加载场景前有loading界面，防止可能存在的加载卡顿</span></li><li><span>游戏中做出了效果较好的爆炸动画</span></li><li><span>触屏挪动放置兵种/开炮时有提示</span></li><li><span>有较为丰富的背景音乐和音效，还能有效控制音乐开关</span></li><li><span>整体的游戏流畅度经过我和几个同学的测试，还算不错，没有明显卡顿</span></li></ul><h2><a name="6.%E6%80%BB%E7%BB%93" class="md-header-anchor"></a><span>6.总结</span></h2><p><span>这次作业是全自主设计，的确难度不太小，想设计出一个内容丰富，容易扩展的大作业并不容易。我的想法是迭代开发，先做出不太难做的游戏内核，然后不断添加功能，最后我不仅把兵种扩展到了5种，还添加了一个新的游戏模式和一个简单的后端，游戏内容丰富起来了。同时，不断的迭代也帮我消除了很多bug。</span></p><p><span>我之前几乎从没玩过手游，的确，手机端，尤其是微信小游戏的游戏设计对我难度是很大的。包括性能限制，网络延迟，分包加载，屏幕适配等都是潜在的问题。为了减小屏幕不匹配问题，我选用了比手机最常用的1300多*700多还小一号的屏幕。为了减少性能造成的卡顿，我增加了一个loading界面。这里感谢王世杰同学帮我解决了分包加载的问题。</span></p><p><span>通过这次作业，我的确提高了代码能力和工程能力，对游戏引擎，前端和手机游戏也有了更深入的理解，学会了如何写更健壮的程序。</span></p><p><span>体验版二维码如下：</span></p><p><img src='resources/QRCode.jpg' alt='' referrerPolicy='no-referrer' /></p><h2><a name="7.%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99" class="md-header-anchor"></a><span>7.参考资料</span></h2><p><span>cocos</span><a href='https://docs.cocos.com/creator/manual/zh/'><span>官方文档</span></a><span>和</span><a href='https://docs.cocos.com/creator/manual/zh/getting-started/quick-start.html'><span>入门程序</span></a></p><p><a href='https://blog.csdn.net/potato47/article/details/51416827'><span>tiledMap资料</span></a></p><p><a href='https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest'><span>XMLHttpRequest资料</span></a></p><p><a href='https://blog.csdn.net/chenyefei/article/details/51988850'><span>解决后端读取参数异常的资料</span></a></p><p><a href='https://blog.csdn.net/harryhare/article/details/80778066'><span>前端发送请求的资料</span></a></p><p>&nbsp;</p></div>
+</body>
+</html>
